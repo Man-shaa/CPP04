@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:02:19 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:52:57 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:03:28 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ Animal	&Animal::operator = (Animal &toCopy)
 std::string Animal::getType(void) const
 {
 	return (_type);
+}
+
+std::string Animal::getSound(void) const
+{
+	return (_sound);
 }
 
 void	Animal::makeSound(void) const

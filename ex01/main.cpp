@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:05:50 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:56:53 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:17:49 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ int    main( void )
 	brain->ideas[2] = "Ball!!!!!";
 	brain->ideas[3] = "Squirrel!!!!!";
 	std::cout << animals[3]->getBrain()->ideas[0] << std::endl;
-
 	*(animals[5]) = *(animals[3]);
 	std::cout << animals[5]->getBrain()->ideas[2] << std::endl;
-
 	for (int i = 0; i < 8; i++)
 		delete animals[i];
 }

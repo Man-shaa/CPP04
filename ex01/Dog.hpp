@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:10:06 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:53:13 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:04:16 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ class Dog : public Animal
 		Dog(Dog &toCopy);
 		~Dog(void);
 
+		Animal &operator = (Animal &toCopy);
 		Dog	&operator = (Dog &toCopy);
+
 		virtual Brain *getBrain(void) const;
 };
 

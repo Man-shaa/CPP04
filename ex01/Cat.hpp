@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:09:54 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:52:58 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:04:36 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ class Cat : public Animal
 		Cat(Cat &toCopy);
 		~Cat(void);
 
+		Animal &operator = (Animal &toCopy);
 		Cat &operator = (Cat &toCopy);
-		virtual Brain *getBrain(void) const;
 
+		virtual Brain *getBrain(void) const;
 };
 
 #endif

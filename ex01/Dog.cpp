@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:11:31 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:53:21 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:15:41 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Dog::~Dog(void)
 
 Dog	&Dog::operator = (Dog &toCopy)
 {
-	_brain = toCopy._brain;
+	*_brain = *toCopy._brain;
 	_type = toCopy._type;
 	_sound = toCopy._sound;
 	return (*this);
@@ -54,4 +54,12 @@ Dog	&Dog::operator = (Dog &toCopy)
 Brain *Dog::getBrain(void) const
 {
 	return (_brain);
+}
+
+Animal	&Dog::operator = (Animal &toCopy)
+{
+	_type = toCopy.getType();
+	_sound = toCopy.getSound();
+	*_brain = *toCopy.getBrain();
+	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 16:41:08 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 17:56:08 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/10 12:56:25 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@ Brain::Brain(void)
 	std::cout << "Brain default constructor called " << std::endl;
 	return ;
 }
-
-// Brain::Brain(std::string type, std::string sound)
-// {
-// 	std::cout << "Brain constructor called " << std::endl;
-// 	return ;
-// }
 
 Brain::Brain(Brain &toCopy)
 {
