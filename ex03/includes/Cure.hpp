@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:05:13 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/10 18:42:58 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/12 18:28:13 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Cure : public AMateria
 {
 	protected:
-	
+
 	public:
 		Cure(std::string const &type);
 		Cure(void);

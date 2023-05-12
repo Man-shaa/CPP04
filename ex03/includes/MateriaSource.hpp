@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 17:27:10 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/12 13:34:39 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/12 16:24:01 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class MateriaSource : public IMateriaSource
 
 		MateriaSource &operator = (MateriaSource &toCopy);
 
-		// void learnMateria(AMateria *toCopy);
-		// AMateria* createMateria(std::string const &type);
+		void learnMateria(AMateria *toCopy);
+		AMateria* createMateria(std::string const &type);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:05:21 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/10 18:42:24 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/12 18:27:55 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Ice : public AMateria
 {
 	protected:
-	
+
 	public:
 		Ice(std::string const &type);
 		Ice(void);

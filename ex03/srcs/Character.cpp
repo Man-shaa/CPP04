@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:05:57 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/12 14:45:15 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/12 17:23:32 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,21 +98,17 @@ Character &Character::operator = (Character &toCopy)
 	_name = toCopy._name;
 	for (int i = 0; i < 4; i++)
 	{
+		if (_inventory[i])
+			delete (_inventory[i]);
 		if (toCopy._inventory[i])
-		{
-			if (_inventory[i])
-				delete (_inventory[i]);
 			_inventory[i] = toCopy._inventory[i]->clone();
-		}
 	}
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 5; i++)
 	{
+		if (_floor[i])
+			delete (_floor[i]);
 		if (toCopy._floor[i])
-		{
-			if (_floor[i])
-				delete (_floor[i]);
 			_floor[i] = toCopy._floor[i]->clone();
-		}
 	}
 	return (*this);
 }
