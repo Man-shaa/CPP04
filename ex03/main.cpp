@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:03:56 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/15 14:40:37 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:57:42 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
 	tmp = new Cure();
 	Shanley.equip(tmp);
 	tmp = new Cure();
-	// Shanley.equip(tmp);
+	//Shanley.equip(tmp);
 	// Shanley.printInventory();
 
 	// std::cout << std::endl;
@@ -50,14 +50,14 @@ int main()
 	// Shanley.use(0, *bob);
 
 	std::cout << "Manu : ";
-	Manu.printInventory();
-	Manu.equip(tmp);
-	Manu = Shanley;
-	Manu.unequip(0);
-	Manu.unequip(2);
-	Manu.use(2, Shanley);
-	Manu.use(3, Shanley);
-	Manu.printInventory();
+	// Manu.printInventory();
+	// Manu.equip(tmp);
+	// Manu = Shanley;
+	// Manu.unequip(0);
+	// Manu.unequip(2);
+	// Manu.use(2, Shanley);
+	// Manu.use(3, Shanley);
+	// Manu.printInventory();
 	Shanley.printInventory();
 	// delete bob;
 	return (0);
@@ -83,12 +83,8 @@ int main()
 // 	tmp = src->createMateria("cure");
 // 	me->equip(tmp);
 // 	ICharacter* bob = new Character("bob");
-// 	std::cout << me << std::endl;
-// 	std::cout << te << std::endl;
-// 	// me->use(0, *bob);
-// 	// me->use(1, *bob);
-// 	te->use(0, *bob);
-// 	te->use(1, *bob);
+// 	me->use(0, *bob);
+// 	me->use(1, *bob);
 // 	delete (bob);
 // 	delete (me);
 // 	delete (src);
