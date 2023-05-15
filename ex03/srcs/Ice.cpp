@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:06:13 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/10 18:42:40 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:47:25 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Ice::~Ice(void)
 
 Ice &Ice::operator = (Ice &toCopy)
 {
+	std::cout << "Ice assignment operator called" << std::endl << std::endl;
 	_type = toCopy._type;
 	return (*this);
 }

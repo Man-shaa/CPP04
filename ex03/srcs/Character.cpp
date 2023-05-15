@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:05:57 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/12 17:23:32 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:39:58 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ void	Character::use(int idx, ICharacter &target)
 
 Character &Character::operator = (Character &toCopy)
 {
+	std::cout << "Character assignment operator called" << std::endl << std::endl;
 	_name = toCopy._name;
 	for (int i = 0; i < 4; i++)
 	{

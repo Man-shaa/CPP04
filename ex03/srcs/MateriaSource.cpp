@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 17:22:39 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/12 18:29:03 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:47:44 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ MateriaSource::~MateriaSource(void)
 
 MateriaSource &MateriaSource::operator = (MateriaSource &toCopy)
 {
+	std::cout << "MateriaSource assignment operator called" << std::endl << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i])
