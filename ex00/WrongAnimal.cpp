@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 16:01:48 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/05 16:11:21 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/20 14:30:40 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 WrongAnimal::WrongAnimal(void)
 {
 	_type = "default";
+	_sound = "default";
 	std::cout << "WrongAnimal default constructor called " << std::endl;
 	return ;
 }
