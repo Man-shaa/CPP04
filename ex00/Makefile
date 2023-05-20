@@ -18,7 +18,6 @@ SRCS	 	=	main.cpp		\
 				WrongAnimal.cpp	\
 				WrongCat.cpp
 
-
 OBJS		=	$(SRCS:%.cpp=${OBJ_DIR}/%.o)
 
 RM			=	rm -rf
