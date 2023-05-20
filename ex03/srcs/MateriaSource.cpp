@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 17:22:39 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/15 12:47:44 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/20 14:57:42 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ MateriaSource::~MateriaSource(void)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i] != NULL)
+		{
 			delete (_inventory[i]);
+			_inventory[i] = NULL;
+		}
 	}
 	return ;
 }
@@ -47,7 +50,10 @@ MateriaSource &MateriaSource::operator = (MateriaSource &toCopy)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i])
+		{
 			delete (_inventory[i]);
+			_inventory[i] = NULL;
+		}
 		if (toCopy._inventory[i])
 			_inventory[i] = toCopy._inventory[i]->clone();
 	}
@@ -66,6 +72,7 @@ void MateriaSource::learnMateria(AMateria *toCopy)
 		}
 	}
 	delete (toCopy);
+	toCopy = NULL;
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type)

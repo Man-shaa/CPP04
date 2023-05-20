@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:05:57 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/15 14:39:58 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:01:26 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,18 @@ Character::~Character(void)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i] != NULL)
+		{
 			delete (_inventory[i]);
+			_inventory[i] = NULL;
+		}
 	}
 	for (int i = 0; i < 5; i++)
 	{
 		if (_floor[i] != NULL)
+		{
 			delete (_floor[i]);
+			_floor[i] = NULL;
+		}
 	}
 	return ;
 }
@@ -65,8 +71,9 @@ void	Character::equip(AMateria	*m)
 			return ;
 		}
 	}
-	std::cout << "No more space in inventory" << std::endl;
+	std::cout << std::endl << "No more space in inventory" << std::endl;
 	delete (m);
+	m = NULL;
 }
 
 void	Character::unequip(int idx)
@@ -82,7 +89,7 @@ void	Character::unequip(int idx)
 			return ;
 		}
 	}
-	std::cout << "No more space on the floor" << std::endl;
+	std::cout << std::endl << "No more space on the floor" << std::endl;
 	delete (_inventory[idx]);
 	_inventory[idx] = NULL;
 }
@@ -100,14 +107,20 @@ Character &Character::operator = (Character &toCopy)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i])
+		{
 			delete (_inventory[i]);
+			_inventory[i] = NULL;
+		}
 		if (toCopy._inventory[i])
 			_inventory[i] = toCopy._inventory[i]->clone();
 	}
 	for (int i = 0; i < 5; i++)
 	{
 		if (_floor[i])
+		{
 			delete (_floor[i]);
+			_floor[i] = NULL;
+		}
 		if (toCopy._floor[i])
 			_floor[i] = toCopy._floor[i]->clone();
 	}
